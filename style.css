@@ -1,0 +1,179 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.hlavni .nazev_pokrmu {
+    font-family: Raleway, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.maly .nazev_pokrmu {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.typ_pokrmu,
+.comments {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hlavni {
+    flex: 1 0 100%;
+    min-height: 200px;
+    background: url("images/salat.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+}
+
+.male {
+    flex: 1 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maly {
+    flex: 1 0 100%;
+    min-height: 90px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+}
+
+.chlebicek {
+    background: url("images/chlebicek.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.tacos {
+    background: url("images/tacos.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.cizrna {
+    background: url("images/cizrna.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.burger {
+    background: url("images/burger.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.typ_pokrmu {
+    flex: 1 0 50%;
+}
+
+.comments {
+    flex: 1 0 50%;
+    text-align: end;
+}
+
+.nazev_pokrmu {
+    flex: 1 0 100%;
+    align-self: flex-end;
+}
+
+/* tablet */
+
+@media (min-width: 480px) {
+    .hlavni {
+        min-height: 250px;
+        padding: 20px;
+    }
+
+    .hlavni .nazev_pokrmu {
+        font-size: 36px;
+    }
+    
+    .maly {
+        flex: 1 0 50%;
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .maly .nazev_pokrmu {
+        font-size: 22px;
+    }
+}
+
+/* pc */
+
+@media (min-width: 860px) {
+    .hlavni {
+        flex: 1 0 30%;
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    .hlavni .nazev_pokrmu {
+        font-size: 48px;
+    }
+    
+    .male {
+        flex: 1 0 60%;
+    }
+
+    .maly {
+        flex: 1 0 50%;
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    .maly .nazev_pokrmu {
+        font-size: 28px;
+    }
+}
